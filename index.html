@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #f8fafc;
+      background: linear-gradient(-45deg, #101a3a, #512b81, #087e8b, #172554);
+      background-size: 400% 400%;
+      animation: gradientShift 14s ease infinite;
+      overflow-x: hidden;
+    }
+
+    .portfolio {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      padding: 36px 24px;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 24px;
+      background: rgba(10, 15, 35, .58);
+      box-shadow: 0 18px 55px rgba(0,0,0,.28);
+      backdrop-filter: blur(10px);
+      animation: appear 1s ease both;
+    }
+
+    h1 {
+      color: #ffd166;
+      font-size: clamp(24px, 4vw, 32px);
+      margin: 28px 0 10px;
+      animation: slideUp .8s ease both;
+    }
+
+    .main-title { margin-top: 0; }
+
+    p {
+      color: #e2e8f0;
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 8px 0 18px;
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      border: 4px solid #ffd166;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(255, 209, 102, .45);
+      animation: float 4s ease-in-out infinite;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.07) rotate(2deg);
+      box-shadow: 0 0 35px rgba(255, 209, 102, .75);
+    }
+
+    .divider {
+      width: 72px;
+      height: 3px;
+      margin: 24px auto;
+      border-radius: 5px;
+      background: linear-gradient(90deg, #ffd166, #06d6a0);
+    }
+
+    .skills {
+      display: inline-block;
+      padding: 10px 18px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes appear {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="portfolio">
+    <h1 class="main-title">My Portfolio</h1>
+
+    <img src="profile.png" alt="My Profile Picture">
+
+    <h1>Hello, I'm Mudzramier!</h1>
+    <p>
+      I am an Information Technology student.<br>
+      I love programming and web development.
+    </p>
+
+    <div class="divider"></div>
+
+    <h1>About Me</h1>
+    <p>
+      I enjoy learning new technologies<br>
+      and creating simple websites.
+    </p>
+
+    <h1>My Skills</h1>
+    <p class="skills">HTML | CSS | JavaScript | C++</p>
+
+    <h1>My Projects</h1>
+    <p>Personal Portfolio Website</p>
+
+    <h1>Contact Me</h1>
+    <p>Email@mudzramer</p>
+
+    <h1>Personal Info</h1>
+    <p>Full name: Mudzramier I Abi</p>
+    <p>Address: Tulay Zone 3</p>
+    <p>Gender: Male</p>
+  </main>
+</body>
+</html>
